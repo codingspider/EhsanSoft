@@ -1,0 +1,96 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <h1 class="text-center">Create a premium experience</h1>
+    <h5 class="text-center">Go beyond a purchase and engage your customer across a truly integrated commerce
+        experience.</h5>
+</div>
+
+<!-- Services section -->
+<section id="what-we-do">
+    <div class="container-fluid">
+        <h2 class="section-title mb-2 h1">What we do</h2>
+        <p class="text-center text-muted h5">Having and managing a correct marketing strategy is crucial in a fast
+            moving market.</p>
+        <div class="row mt-5">
+            {% for com in commerce%}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="card">
+
+                    <div class="card-block">
+                        <i style="font-size: 48px; margin-bottom: 5px;" class="{{ com.icon }}"></i>
+                        <h3 class="card-title">{{ com.title }}</h3>
+
+                        <p class="card-text">{{ com.description | safe }}</p>
+                        <a href="{{ com.slug }}" title="Read more" class="read-more">Read more<i
+                                class="fa fa-angle-double-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div class="card" style="width: 100%;">
+            <img src="https://codedthemes.com/wp-content/uploads/edd/2019/05/flat.jpg"
+                 class="card-img-top img-responsive" alt="...">
+
+        </div>
+        <div>
+            <h1 class="text-center">Everything you need in one place</h1><br>
+            <p class="text-center">Access all the tools you need to setup your online store and create the end to end
+                commerce experience.</p>
+        </div>
+
+    </div>
+    <div class="row">
+        {% for card in everything %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ multipleway.img_url }}" class="img-responsive" alt="">
+
+    </div>
+    <div class="col-md-6" style="padding-left: 50px;">
+            <div class="card newsletter-space">
+                <div class="card-body">
+                    <h2 class="card-title">{{ multipleway.title }}</h2>
+                    <p class="card-text">{{ multipleway.description }}</p>
+                </div>
+            </div>
+    </div>
+
+</div>
+    <div class="row">
+    <div class="col-md-6">
+        <div class="card newsletter-space">
+                <div class="card-body">
+                    <h2 class="card-title">{{ simpleorder.title }}</h2>
+                    <p class="card-text">{{ simpleorder.description }}</p>
+                </div>
+            </div>
+
+    </div>
+    <div class="col-md-6" style="padding-left: 50px;">
+                    <img src="{{ simpleorder.img_url }}" class="img-responsive" alt="">
+
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

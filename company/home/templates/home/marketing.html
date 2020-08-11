@@ -1,0 +1,65 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 newsletter-space">
+            <img src="{{ div_one.image }}"
+                 class="img-responsive" alt="">
+        </div>
+        <div class="col-md-6 newsletter-run">
+            <h2>{{ div_one.title }}</h2>
+            <p>{{ div_one.description }}</p>
+        </div>
+
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 newsletter-space">
+            <h2>{{ div_two.title }}</h2>
+            <p>{{ div_two.description }}</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ div_two.image }}"
+                 class="img-responsive" alt="">
+        </div>
+
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 newsletter-space">
+            <img src="{{ div_three.image }}"
+                 class="img-responsive" alt="">
+        </div>
+        <div class="col-md-6 newsletter-run">
+            <h2>{{ div_three.title }}</h2>
+            <p>{{ div_three.description }}</p>
+        </div>
+
+    </div>
+    {% for leader in marketing_tools %}
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="{{ leader.image }}" class="img-responsive" style="width:50px; height:50px; margin-bottom: 10px;" alt="">
+                        <h2>{{ leader.title }}</h2>
+                        <p>{{ leader.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock %}

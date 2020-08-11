@@ -1,0 +1,103 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+<div class="container">
+    <br>
+
+    <div class="row" id="adds">
+        <!-- Category Card -->
+        {% for data in intencent %}
+        <div class="col-md-6">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="{{ data.icon }}"
+                             style="width:50px; height:50px;" alt="">
+                        <h2>{{ data.title }}</h2>
+                        <p>{{ data.description }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+<div class="container loyalty-h2">
+    <div class="loyal-image ">
+        <h2 style="margin-top: 100px; ">Programs that deliver results</h2>
+        <h5 style="margin-bottom: 50px;" class="text-center">A few examples of programs our customers have built using
+            Ehsan Software.</h5>
+        <div class="loyal-image">
+            <img style="margin-bottom: 50px;"
+                 src="http://www.kademi.co/_hashes/files/d1cb2aa9827e554a1114cfd7710816dcd5f6fad7"
+                 class="img-responsive" alt="">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <br>
+    <div class="row" id="add">
+        {% for trade in trade_loyalty %}
+        <!-- Category Card -->
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="{{ trade.icon }}"
+                             style="width:50px; height:50px;" alt="">
+                        <h2>{{ trade.title }}</h2>
+                        <p>{{ trade.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="jumbotron p-5">
+        <h2 class="text-center">{{ modular_meet.title }}</h2>
+        <h5 class="text-center">{{ modular_meet.description }}</h5>
+        <div class="col-md-6">
+            <img src="{{ modular_meet.image_1 }}" alt="">
+        </div>
+        <div class="col-md-6">
+            <img src="{{ modular_meet.image_2 }}"
+                 class="img-responsive" alt="">
+        </div>
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="jumbotron p-5">
+{% for leader in leader_loyalty %}
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="{{ leader.image }}"
+                             style="width:50px; height:50px;" alt="">
+                        <h2>{{ leader.title }}</h2>
+                        <p>{{ leader.description }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

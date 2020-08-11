@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/frontpage.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/commerce.css' %}">
+    <title>Ehsan Soft</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a style="text-transform: uppercase;" class="text-secondary font-weight-bold" href="/">Ehsan Software </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold" href="/blog">Blog </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary font-weight-bold" href="#" id="navbarDropdown"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Platform
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a style="background-color: #e21f5e" href="/full/stack" class="dropdown-item"> Explore The
+                            Platform </a>
+                        <a class="dropdown-item" href="/commerce">Commerce </a>
+                        <a class="dropdown-item" href="/loyalty">Loyalty & Incentives</a>
+                        <a class="dropdown-item" href="/marketing">Marketing </a>
+                        <a class="dropdown-item" href="/workflow">Workflow Automation </a>
+                        <a class="dropdown-item" href="/crm">CRM </a>
+                        <a class="dropdown-item" href="/online">Online Training </a>
+                        <a class="dropdown-item" href="/feedback">Customers Feedback</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold" href="/partners">Partners </a>
+                </li>
+                <li class="nav-item">
+                    <a style="background-color: #e21f5e"
+                       class="nav-link btn btn-danger text-white font-weight-bold text-justify" href="/bookasoft">GET A
+                        DEMO </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navigation -->
+<header class="bg-primary py-5 mb-5 headerblue" style="min-height: 350px;">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-12">
+                <h5 class="display-4 text-white mt-5 mb-2 text-left font-weight-bold">{{ header.title }}</h5>
+                <p class="lead mb-5 text-white text-left font-weight-bold"> {{ header.description }} </p>
+            </div>
+            <div>
+                <a href="/bookasoft" class="btn btn-dark">Book A Software Demo</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<div class="container">
+    <div class="row newsletter-space">
+        <div class="col-md-6">
+            <div class="card" style="min-height: 200px; padding-left:10px; padding-right: 10px;">
+                <div class="card-body">
+                    <h3>Keep in touch</h3>
+                    <p>Sign-up for the latest Ehsan Software how to's, case studies and more by signing up to Ehsan
+                        Software updates..</p>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                    <button class="btn btn-info" type="button">Go!</button></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card" style="min-height: 200px;padding-left:10px; padding-right: 10px;">
+                <div class="card-body">
+                    <h3>Get a demonstration</h3>
+                    <p>Speak with a Ehsan Software sales person and see how Ehsan Software can support your company</p>
+                </div>
+                <div>
+                    <a href="/bookasoft" id="login-button" class="btn btn-info pull-right">Book A Demo</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4"><a class="brand" href="/">
+                        <img class="brand-logo-light"
+                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDhObrU8wtMcFe6x2Byl5GuDjj5OMojOOb4Q&usqp=CAU" alt=""
+                             width="300" height="200"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h5 class="text-info font-weight-bold">Products</h5>
+                    <ul class="nav-list">
+                        <li><a href="/full/stack" class="">Full Stack</a></li>
+                        <li><a href="/commerce">B2B Commerce</a></li>
+                        <li><a href="/loyalty">Loyalty & Incentives</a></li>
+                        <li><a href="/marketing">Marketing</a></li>
+                        <li><a href="/workflow">Workflow Automation</a></li>
+                        <li><a href="/crm">CRM</a></li>
+                        <li><a href="/online">Online Training</a></li>
+                        <li><a href="/feedback">Customer Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <h5 class="text-info font-weight-bold">Connect</h5>
+                    <ul class="nav-list">
+                        <li><a href="/bookasoft">Book a demo</a></li>
+                        <li><a href="#">Explore a partnership</a></li>
+                        <li><a href="/contact">Contact Ehsan Software</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+</body>
+</html>

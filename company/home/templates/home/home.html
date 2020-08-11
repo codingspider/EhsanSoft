@@ -1,0 +1,291 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+
+<div class="container">
+    <br>
+    <div class="row" id="adds">
+        <!-- Category Card -->
+        <div class="col-md-6 topbar">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="http://www.kademi.co/_hashes/files/3fef45f3e5fdf6b0562377e2f67bb1af68043d2d" style="width:50px; height:50px; margin-bottom:10px;" alt="">
+                        <br>
+                        <h2>{{ b2b_commerce.title }}</h2>
+                        <p>{{ b2b_commerce.description }}</p>
+                    </div>
+                    <a class="ad-btn" href="/commerce">Find out more ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 topbar">
+            <div class="card rounded">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <img src="http://www.kademi.co/_hashes/files/4412931c07126b4fecaf8cf40ab353cb5e098b08" style="width:50px; height:50px;margin-bottom:10px;" alt="">
+                        <br>
+                        <h2>{{ loyalty_and_incentive.title }}</h2>
+                        <p>{{ loyalty_and_incentive.description }}</p>
+                    </div>
+                    <a class="ad-btn" href="/loyalty">Find out more ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="jumbotron p-4">
+        <a href="/full/stack" class=""><p class="text-center font-weight-bold">Explore the Ehsan Software platform</p></a>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-12 end">
+        <h1 class="text-center font-weight-bold">End-to-end channel engagement</h1>
+        <h4 class="text-center">Ehsan Software accelerates sales performance for companies across the entire sales channel.</h4>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4 manufactures">
+            <div class="card" style="padding-left:10px; padding-right: 10px;">
+                <img class="card-img-top"
+                     src="{{ manufactures.img_url }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ manufactures.title }}</h5>
+                    <p class="card-text">{{ manufactures.description }}</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 manufactures">
+            <div class="card" style="padding-left:10px; padding-right: 10px;">
+                <img class="card-img-top"
+                     src="{{ distributors.img_url }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ distributors.title }}</h5>
+                    <p class="card-text">{{ distributors.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 manufactures">
+            <div class="card" style="padding-left:10px; padding-right: 10px;">
+                <img class="card-img-top"
+                     src="{{ retailer.img_url }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ retailer.title }}</h5>
+                    <p class="card-text">{{ retailer.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 jobs_index_middle_panels">
+            <div class="card" style="padding-left:10px; padding-right: 10px;">
+                <div class="card-block">
+                    <h2 class="card-title text-center caspace">Partner with Ehsan Soft</h2>
+                    <h6 class="card-subtitle mb-2 text-center">{{ partner_with.description }}</h6><br>
+                    <p class="text-center"> <a href="/partners" class="text-justify">Find out more ></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container grey">
+    <h2 class="text-center">Everything Connects</h2>
+    <h4 class="text-center">{{ everything_connects.description }}</h4>
+    <div>
+        <img class="image-fluid" style="width:100%;" src="{{ everything_connects.img_url }}" alt="">
+    </div>
+    <br>
+    <div class="row ads" id="ads">
+        <!-- Category Card -->
+        <div class="col-md-4">
+            <div class="card rounded" style="min-height: 210px; padding-left:10px; padding-right: 10px;">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <h5>{{ one_platform.title }}</h5>
+                        <p>{{ one_platform.description }}</p>
+                    </div>
+                    <a class="ad-btn" href="/full/stack">Find out more ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card rounded" style="min-height: 210px;padding-left:10px; padding-right: 10px;">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <h5>{{ smart_connected.title }}</h5>
+                        <p>{{ smart_connected.description }}</p>
+                    </div>
+                    <a class="ad-btn" href="/workflow">Find out more ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card rounded" style="min-height: 210px;padding-left:10px; padding-right: 10px;">
+                <div class="card-image">
+                    <span class="card-notify-badge"></span>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ad-title m-auto">
+                        <h5>{{ open_to_integrate.title }}</h5>
+                        <p>{{ open_to_integrate.description }}</p>
+                    </div>
+                    <a class="ad-btn" href="/full/stack">Find out more ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container newsletter-space">
+    <h2 class="text-center">{{ advantage.title }}</h2>
+    <p class="text-center">{{ advantage.description }}</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="min-height: 210px;">
+                <div class="table table-info">
+                    <h5 class="category-social">
+                        <i class="fa fa-rocket"></i>{{ quick_to_market.title }}
+                    </h5>
+                    <p>{{ quick_to_market.description }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="min-height: 210px;">
+                <div class="table table-info">
+                    <h5 class="category-social">
+                        <i class="fa fa-balance-scale"></i> {{ personalized_support.title }}
+                    </h5>
+                    <p>{{ personalized_support.description }} </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="min-height: 210px;">
+                <div class="table table-info">
+                    <h5 class="category-social">
+                        <i class="fa fa-lock"></i> {{ global_secure.title }}
+                    </h5>
+                    <p> {{ global_secure.description }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container newsletter-dd">
+    <h2 style="text-align:center;">Customer success first</h2>
+    <h3 style="border-bottom:solid 1px #eee" class="text-center">Delivering measurable results for companies around the
+        world.</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="Carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+
+                        <div class="row">
+                            {% for image in messages %}
+                            <div class="col-md-2 border border-info">
+                                <a href="#" class="thumbnail">
+                                    <img style="height: 100px; width: 100%;" class="card-image mr-3"
+                                         src="{{ image.document.url }}" alt="Generic placeholder image">
+                                </a>
+                                <h5 style="margin-bottom: 10px;">{{ image.name }}</h5>
+                                 <div class="col text-center">
+                                  <button class="btn btn-info">Details</button>
+                                </div>
+
+                                <div id="ex1" class="modal">
+                                    <p>{{ image.name }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div><!--.row-->
+                    </div><!--.item-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        {% for data in messages %}
+        {% if forloop.first %}
+        <div class="carousel-item active">
+            {% else %}
+            <div class="carousel-item">
+                {% endif %}
+
+                <div class="card ">
+                    <div class="card-body text-center border">
+                        <p>
+                            <img class="rounded-circle img-fluid" src="{{ data.document.url }}"
+                                 style="height:50px; width: 50px;" alt="card image">
+                        </p>
+                        <h4 class="card-title"><a href="{{ data.web }}"
+                                                  class="btn btn-primary btn-sm"> <i class="fa fa-globe"></i>
+                            {{ data.name }}</a></h4><br>
+                        <p>{{ data.speech }}</p>
+                        <div class="widgets_div">
+                            <div class="icon_div">
+                                <span> <img class="rounded-circle img-fluid" src="{{ data.p_image.url }}"
+                                 style="height:60px; width: 60px; margin-right: 20px; margin-top: 40px;" alt="card image"></span>
+                            </div>
+                            <div class="text_div">
+                                <span>Name of Principle : {{ data.p_name}}</span><br>
+                                <span style="margin-left: 80px;">Designation: {{ data.designation }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <a class="carousel-control-prev text-info" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon text-info" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon text-info" aria-hidden="true"></span>
+            <span class="sr-only text-info">Next</span>
+        </a>
+    </div>
+</div>
+
+
+
+{% endblock %}
