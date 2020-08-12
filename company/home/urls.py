@@ -1,3 +1,4 @@
+from django.conf.urls import url
 from django.urls import path
 
 from . import views
@@ -14,7 +15,8 @@ urlpatterns = [
     path('bookasoft/', views.bookasoft, name="bookasoft"),
     path('contact/', views.contact, name="contact"),
     path('partners/', views.partners, name="partners"),
-    path('full/stack', views.admincrm)
+    path('full/stack', views.admincrm),
+    url(r'^likepost/$', views.likePost, name='likepost'),
 
 
 

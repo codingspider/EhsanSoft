@@ -1,4 +1,4 @@
-
+from ckeditor.widgets import LazyEncoder
 from django.shortcuts import render
 from .models import HeaderHome
 from .models import GlobalSecure
@@ -12,9 +12,11 @@ from onlinetraining.models import *
 from customerfeedback.models import *
 from fulstack.models import *
 from school.models import *
-
+from django.http import JsonResponse, HttpResponse
 from marketing.models import *
-
+import json
+from school.models import SchoolLogo
+from django.core.serializers import serialize
 
 def home(request):
     header = HeaderHome.objects.get()
@@ -155,3 +157,11 @@ def admincrm(request):
         'div5': div5,
         'div6': div6
     })
+
+
+def likePost(request):
+    if request.method == 'GET':
+        bar = serialize('json', SchoolLogo.objects.all(), cls=LazyEncoder)
+        return JsonResponse(bar, safe=False)
+    else:
+        return HttpResponse("Request method is not a GET")

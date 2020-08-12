@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'post.apps.PostConfig'
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -67,7 +69,7 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-
+COMMENTS_APP = 'django_comments_xtd'
 ROOT_URLCONF = 'company.urls'
 
 MEDIA_URL = '/media/'
