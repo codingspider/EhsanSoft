@@ -1,6 +1,5 @@
 {% extends 'frontend/base.html' %}
 {% block content %}
-
 <div class="container">
     <br>
     <div class="row" id="adds">
@@ -158,7 +157,6 @@
         </div>
     </div>
 </div>
-
 <div class="container newsletter-space">
     <h2 class="text-center">{{ advantage.title }}</h2>
     <p class="text-center">{{ advantage.description }}</p>
@@ -196,6 +194,33 @@
         </div>
     </div>
 </div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">School Information </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <h5 class="name"></h5>
+          <p class="student"></p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <div class="container newsletter-dd">
     <h2 style="text-align:center;">Customer success first</h2>
     <h3 style="border-bottom:solid 1px #eee" class="text-center">Delivering measurable results for companies around the
@@ -209,15 +234,10 @@
             </a>
             <h5 style="margin-bottom: 10px;">{{ image.name }}</h5>
             <div class="col text-center">
-                <button class="btn btn-info">Details</button>
-            </div>
-
-            <div id="ex1" class="modal">
-                <p>{{ image.name }}</p>
+               <button class="btn btn-primary tag_cnt" style="top:144px; left:510px" onclick="showModal('{{ image.name }}', '{{ image.id }}')" type="button"> Details </button>
             </div>
         </div>
         {% endfor %}
-
     </div><!--.row-->
 </div><br>
 
