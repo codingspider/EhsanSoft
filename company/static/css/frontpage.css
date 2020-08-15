@@ -8633,7 +8633,6 @@ body { font-family: sans-serif; }
 
 .carousel-cell {
   width: 50%;
-  height: 500px;
   margin-right: 10px;
 
 }
@@ -8694,3 +8693,20 @@ body { font-family: sans-serif; }
   .pname-font{
     font-size: 0.8em;
   }
+
+  .modal-dialog {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, -100%);
+}
+
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
