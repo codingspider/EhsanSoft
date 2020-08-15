@@ -16,6 +16,8 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('partners/', views.partners, name="partners"),
     path('full/stack', views.admincrm),
+    path('school/details/<int:id>', views.school_details),
+    path('subscriber/added', views.subscriber),
     url(r'^likepost/$', views.likePost, name='likepost'),
 
 

@@ -1,9 +1,8 @@
+import os
+import sys
+sys.path.append(os.path.realpath('.'))
 from ckeditor.widgets import LazyEncoder
-from django.shortcuts import render
-from .models import HeaderHome
-from .models import GlobalSecure
-from .models import PersonalizedSupport
-from .admin import *
+from django.shortcuts import render, redirect
 from  booksoft.models import *
 from commerce.models import *
 from loyalty.models import *
@@ -14,9 +13,10 @@ from fulstack.models import *
 from school.models import *
 from django.http import JsonResponse, HttpResponse
 from marketing.models import *
-import json
 from school.models import SchoolLogo
 from django.core.serializers import serialize
+from .models import *
+
 
 def home(request):
     header = HeaderHome.objects.get()
@@ -34,8 +34,6 @@ def home(request):
     manufactures = Manufacturers.objects.get()
     loyalty_and_incentive = LoyaltyAndIncentives.objects.get()
     b2b_commerce = B2BCommerce.objects.get()
-
-
 
     return render(request, 'home/home.html', {
         'header': header,
@@ -142,20 +140,20 @@ def partners(request):
 
 def admincrm(request):
     header = FullStackHeader.objects.get()
-    div1 = DivOne.objects.get()
-    div2 = DivTwo.objects.get()
-    div3 = DivThree.objects.all()
-    div4 = DivFour.objects.get()
-    div5 = DivFive.objects.all()
-    div6 = DivSix.objects.all()
+    div1data = DivOne.objects.get()
+    div2data = DivTwo.objects.get()
+    div3data = DivThree.objects.all()
+    div4data = DivFour.objects.get()
+    div5data = DivFive.objects.all()
+    div6data = DivSix.objects.all()
     return render(request, 'home/admincrm.html', {
         'header': header,
-        'div1': div1,
-        'div2': div2,
-        'div3': div3,
-        'div4': div4,
-        'div5': div5,
-        'div6': div6
+        'div1': div1data,
+        'div2': div2data,
+        'div3': div3data,
+        'div4': div4data,
+        'div5': div5data,
+        'div6': div6data
     })
 
 
@@ -165,3 +163,18 @@ def likePost(request):
         return JsonResponse(bar, safe=False)
     else:
         return HttpResponse("Request method is not a GET")
+
+
+def school_details(self, request, *args, **kwargs):
+    pass
+
+
+def subscriber(request):
+    if request.method == 'POST':
+        if request.POST.get('subscriber'):
+            post = Subscriber()
+            post.title = request.POST.get('subscriber')
+            post.save()
+    return redirect('/')
+
+

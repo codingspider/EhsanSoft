@@ -8095,11 +8095,7 @@ body {
     padding: 80px 0px 80px 0px;
   }
 }
-@media (min-width: 1200px) {
-  .section {
-    padding: 130px 0px 130px 0px;
-  }
-}
+
 .sectionsmall {
   background-color: #f9fafc;
   border-top: 1px solid #e7ecf7;
@@ -8682,8 +8678,8 @@ body { font-family: sans-serif; }
 
 .topbar{
 
-    min-height:250x;
-    max-height:250px;
+    min-height:270x;
+    max-height:300px;
 
     }
   .speech-font{
@@ -8709,4 +8705,8 @@ body { font-family: sans-serif; }
 
 .modal.in .modal-dialog {
   transform: translate(0, 0);
+}
+
+.btn-change3:hover{
+    -webkit-box-shadow: 0px 50px 0 0px #31708f inset , 0px -50px 0 0px #31708f inset;
 }

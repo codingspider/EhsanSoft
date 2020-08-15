@@ -1,0 +1,38 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+
+{% for value in instance %}
+
+
+<div class="well">
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="{{ value.image.url }}" style="height: 200px; ">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">{{ value.title }}</h4>
+            <p class="text-right">{{ value.author }}</p>
+            <p>{{ value.short_description }}</p>
+            <ul class="list-inline list-unstyled">
+                <li><span><i class="fa fa-calendar"></i> {{ value.publis_date }}</span></li>
+                <li>|</li>
+                <span><i class="fa fa-comment"></i> 2 comments</span>
+                <li>|</li>
+                <li>
+                    <a href="/blog/details/{{ value.id }}" class="href">Read More...</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <div class="sharethis-inline-share-buttons"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}

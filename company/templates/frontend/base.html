@@ -7,9 +7,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f3393fac1e8650012ce715a&product=inline-share-buttons" async="async"></script>
+    <!--    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f3393fac1e8650012ce715a&product=inline-share-buttons" async="async"></script>-->
 
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -53,7 +52,7 @@
                 </li>
                 <li class="nav-item">
                     <a style="background-color: #e21f5e"
-                       class="nav-link btn btn-danger text-white font-weight-bold text-justify" href="/bookasoft">GET A
+                       class="nav-link text-white font-weight-bold text-justify" href="/bookasoft">GET A
                         DEMO </a>
                 </li>
             </ul>
@@ -89,9 +88,15 @@
                         Software updates..</p>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                    <button class="btn btn-info" type="button">Go!</button></span>
+                    <form action="/subscriber/added" method="post">
+                        {% csrf_token %}
+
+                        <button class="btn btn-info" type="submit" style="float: right">Go!</button>
+
+                        <div style="overflow: hidden; padding-right: .5em;">
+                            <input name="subscriber" class="form-control" type="text" style="width: 100%;"/>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -109,50 +114,50 @@
 
     </div>
 </div>
-
-    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
-        <div class="container">
-            <div class="row row-30">
-                <div class="col-md-4 col-xl-5">
-                    <div class="pr-xl-4"><a class="brand" href="/">
-                        <img class="brand-logo-light"
-                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDhObrU8wtMcFe6x2Byl5GuDjj5OMojOOb4Q&usqp=CAU" alt=""
-                             width="300" height="200"></a>
-                    </div>
-                </div>
-                <div class="col-md-4 ">
-                    <h5 class="text-info font-weight-bold">Products</h5>
-                    <ul class="nav-list">
-                        <li><a href="/full/stack" class="">Full Stack</a></li>
-                        <li><a href="/commerce">B2B Commerce</a></li>
-                        <li><a href="/loyalty">Loyalty & Incentives</a></li>
-                        <li><a href="/marketing">Marketing</a></li>
-                        <li><a href="/workflow">Workflow Automation</a></li>
-                        <li><a href="/crm">CRM</a></li>
-                        <li><a href="/online">Online Training</a></li>
-                        <li><a href="/feedback">Customer Feedback</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-xl-3">
-                    <h5 class="text-info font-weight-bold">Connect</h5>
-                    <ul class="nav-list">
-                        <li><a href="/bookasoft">Book a demo</a></li>
-                        <li><a href="#">Explore a partnership</a></li>
-                        <li><a href="/contact">Contact Ehsan Software</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+<footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4"><a class="brand" href="/">
+                    <img class="brand-logo-light"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDhObrU8wtMcFe6x2Byl5GuDjj5OMojOOb4Q&usqp=CAU"
+                         alt=""
+                         width="300" height="200"></a>
                 </div>
             </div>
+            <div class="col-md-4 ">
+                <h5 class="text-info font-weight-bold">Products</h5>
+                <ul class="nav-list">
+                    <li><a href="/full/stack" class="">Full Stack</a></li>
+                    <li><a href="/commerce">B2B Commerce</a></li>
+                    <li><a href="/loyalty">Loyalty & Incentives</a></li>
+                    <li><a href="/marketing">Marketing</a></li>
+                    <li><a href="/workflow">Workflow Automation</a></li>
+                    <li><a href="/crm">CRM</a></li>
+                    <li><a href="/online">Online Training</a></li>
+                    <li><a href="/feedback">Customer Feedback</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                <h5 class="text-info font-weight-bold">Connect</h5>
+                <ul class="nav-list">
+                    <li><a href="/bookasoft">Book a demo</a></li>
+                    <li><a href="#">Explore a partnership</a></li>
+                    <li><a href="/contact">Contact Ehsan Software</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
         </div>
+    </div>
 
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <!-- jQuery Modal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+<script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+<script id="dsq-count-scr" src="//ehsan-software.disqus.com/count.js" async></script>
+
 </body>
 </html>

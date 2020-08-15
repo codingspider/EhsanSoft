@@ -8,16 +8,16 @@
         <div class="well">
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img class="media-object" src="{{ value.image.url }}" style="height: 200px; ">
+                    <a href="/blog/details/{{ value.id }}" class="href"><img class="media-object" src="{{ value.image.url }}" style="height: 200px; margin-right: 20px; "></a>
                 </a>
                 <div class="media-body">
-                    <h4 class="media-heading">{{ value.title }}</h4>
+                    <h4 class="media-heading"><a href="/blog/details/{{ value.id }}" class="href">{{ value.title }}</a></h4>
                     <p class="text-right">{{ value.author }}</p>
                     <p>{{ value.short_description }}</p>
                     <ul class="list-inline list-unstyled">
                         <li><span><i class="fa fa-calendar"></i> {{ value.publis_date }}</span></li>
                         <li>|</li>
-                        <span><i class="fa fa-comment"></i> 2 comments</span>
+                        <span data-disqus-identifier="article_1_identifier"><i class="fa fa-comment"></i> <a href="/blog/details/{{ value.id }}#disqus_thread">Comment</a></span>
                         <li>|</li>
                         <li>
                             <a href="/blog/details/{{ value.id }}" class="href">Read More...</a>
@@ -72,6 +72,6 @@
         </ul>
     </div>
 </div>
-</div>
+
 
 {% endblock %}

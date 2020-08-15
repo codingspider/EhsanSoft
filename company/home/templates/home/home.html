@@ -1,5 +1,6 @@
 {% extends 'frontend/base.html' %}
 {% block content %}
+
 <div class="container">
     <br>
     <div class="row" id="adds">
@@ -43,7 +44,7 @@
 <br>
 <div class="container">
     <div class="jumbotron p-4">
-        <a href="/full/stack" class=""><p class="text-center font-weight-bold">Explore the Ehsan Software platform</p>
+        <a  style="text-align: center;" href="/full/stack" class=""><h2 class="btn-change3">Explore the Ehsan Software platform</h2>
         </a>
     </div>
 </div>
@@ -51,8 +52,8 @@
     <div class="col-md-12 end">
         <h1 class="text-center font-weight-bold">End-to-end channel engagement</h1>
         <h4 class="text-center">Ehsan Software accelerates sales performance for companies across the entire sales
-            channel.</h4>
-
+            channel.
+        </h4>
     </div>
     <div class="row">
         <div class="col-md-4 manufactures">
@@ -63,7 +64,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ manufactures.title }}</h5>
                     <p class="card-text">{{ manufactures.description }}</p>
-
                 </div>
             </div>
         </div>
@@ -105,13 +105,13 @@
     </div>
 </div>
 <div class="container grey">
-    <h2 class="text-center">Everything Connects</h2>
-    <h4 class="text-center">{{ everything_connects.description }}</h4>
-    <div>
+    <h2 style="margin-top: 30px;" class="text-center">Everything Connects</h2>
+    <h4 style="margin-top: 30px;" class="text-center">{{ everything_connects.description }}</h4>
+    <div style="margin-top: 50px;">
         <img class="image-fluid" style="width:100%;" src="{{ everything_connects.img_url }}" alt="">
     </div>
     <br>
-    <div class="row ads" id="ads">
+    <div class="row ads">
         <!-- Category Card -->
         <div class="col-md-4">
             <div class="card rounded" style="min-height: 210px; padding-left:10px; padding-right: 10px;">
@@ -208,8 +208,10 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-          <h5 class="name"></h5>
-          <p class="student"></p>
+          <label>School Name: <span class="name"></span></label><br>
+          <label>Total Students: <span class="student"></span></label><br>
+          <label>Using Service: <span class="service"></span></label>
+
       </div>
       <!-- Modal footer -->
       <div class="modal-footer">
@@ -233,7 +235,7 @@
             </a>
             <h5 style="margin-bottom: 10px;">{{ image.name }}</h5>
             <div class="col text-center">
-               <button class="btn btn-primary tag_cnt" style="top:144px; left:510px" onclick="showModal('{{ image.name }}', '{{ image.id }}')" type="button"> Details </button>
+               <button class="btn btn-primary tag_cnt" style="top:144px; left:510px" onclick="showModal('{{ image.name }}', '{{ image.stuendts }}', '{{ image.apps }}')" type="button"> Details </button>
             </div>
         </div>
         {% endfor %}
@@ -255,7 +257,7 @@
                         <div class="col-md-6 col-xs-6 text-right">
                         <img class="carousel-cell-image rounded img-responsive"
                              data-flickity-lazyload="{{ data.p_image.url }}"
-                             style="height: 70px; width: 70px; margin-left: 100px;"/>
+                             style="height: 70px; width: 70px;"/>
                     </div>
                     <div class="col-md-6 col-xs-6">
                         <p class="pname-font">{{ data.p_name }}</p>

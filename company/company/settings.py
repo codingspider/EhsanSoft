@@ -78,7 +78,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '/media/documents')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,7 +149,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 JAZZMIN_SETTINGS = {
@@ -158,9 +158,6 @@ JAZZMIN_SETTINGS = {
 
     # Title on the brand, and the login screen (19 chars max)
     'site_header': 'Ehsan Software',
-
-    # square logo to use for your site, must be present in static files, used for favicon and brand on top left
-    #'site_logo': 'polls/img/logo.png',
 
     # Welcome text on the login screen
     'welcome_sign': 'Welcome to Ehsan Software',
@@ -185,7 +182,6 @@ JAZZMIN_SETTINGS = {
         {'name': 'Home',  'url': 'admin:index', 'permissions': ['auth.view_user']},
 
         # external url that opens in a new window (Permissions can be added)
-        #{'name': 'Support', 'url': 'https://github.com/farridav/django-jazzmin/issues', 'new_window': True},
 
         # model admin to link to (Permissions checked against model)
         {'model': 'auth.User'},
@@ -199,8 +195,8 @@ JAZZMIN_SETTINGS = {
     #############
 
     # Additional links to include in the user menu on the top right ('app' url type is not allowed)
+
     'usermenu_links': [
-       # {'name': 'Support', 'url': 'https://github.com/farridav/django-jazzmin/issues', 'new_window': True},
         {'model': 'auth.user'}
     ],
 
@@ -264,5 +260,5 @@ JAZZMIN_SETTINGS = {
     # - carousel
     "changeform_format": "horizontal_tabs",
     # override change forms on a per modeladmin basis
-    "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs",},
+    "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs", },
 }
