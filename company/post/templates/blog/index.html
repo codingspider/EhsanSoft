@@ -1,0 +1,77 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+
+<div class="container text-center">
+
+    <div class="col-sm-8 text-left">
+        {% for value in data %}
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{{ value.image.url }}" style="height: 200px; ">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{ value.title }}</h4>
+                    <p class="text-right">{{ value.author }}</p>
+                    <p>{{ value.short_description }}</p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="fa fa-calendar"></i> {{ value.publis_date }}</span></li>
+                        <li>|</li>
+                        <span><i class="fa fa-comment"></i> 2 comments</span>
+                        <li>|</li>
+                        <li>
+                            <a href="/blog/details/{{ value.id }}" class="href">Read More...</a>
+                        </li>
+                        <li>|</li>
+                        <li>
+                           <div class="sharethis-inline-share-buttons"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% if data.has_other_pages %}
+        <ul class="pagination">
+            {% if data.has_previous %}
+            <li><a href="?page={{ data.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in users.paginator.page_range %}
+            {% if data.number == i %}
+            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% if data.has_next %}
+            <li><a href="?page={{ data.next_page_number }}">&raquo;</a></li>
+            {% else %}
+            <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    </div>
+
+
+    <div class="col-sm-4 sidenav">
+        <h3>Category With Post </h3>
+        <ul class="list-group">
+            {% for categ in categories %}
+                <li class="list-group-item"><a href="/post/by/cat/{{ categ.id }}" class="href">{{ categ.title }} ({{ categ.category.count }})</a></li>
+            {% endfor %}
+        </ul>
+        <br>
+             <h3>Tag With Post </h3>
+        <ul class="list-group">
+            {% for value in tags %}
+                <li class="list-group-item"><a href="/post/by/tag/{{ value.id }}" class="href">{{ value.title }} ({{ value.tag_set.count }})</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</div>
+
+{% endblock %}
